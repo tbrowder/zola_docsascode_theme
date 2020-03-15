@@ -1,5 +1,5 @@
 FROM ubuntu:latest AS ZOLA
-RUN wget -c https://github.com/getzola/zola/releases/download/v0.10.1/zola-v0.10.1-x86_64-unknown-linux-gnu.tar.gz -O - | tar -xz
+RUN curl -L https://github.com/getzola/zola/releases/download/v0.10.1/zola-v0.10.1-x86_64-unknown-linux-gnu.tar.gz -O - | tar -xz
 RUN mv zola /usr/bin
 COPY . /site
 WORKDIR /site
