@@ -1,7 +1,8 @@
-FROM j1mc/docker-zola:latest AS ZOLA
+FROM archlinux:latest AS ZOLA
+RUN yay -S zola-bin
 COPY . /site
 WORKDIR /site
-CMD ["build"]
+RUN zola build
 FROM nginx:stable-alpine
 RUN mv /usr/share/nginx/html/index.html /usr/share/nginx/html/old-index.html
 COPY --from=ZOLA /site/public/ /usr/share/nginx/html/
