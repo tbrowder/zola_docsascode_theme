@@ -1,5 +1,5 @@
 FROM debian:stable-slim AS ZOLA
-RUN apt-get install wget && wget -c https://github.com/getzola/zola/releases/download/v0.10.1/zola-v0.10.1-x86_64-unknown-linux-gnu.tar.gz -O - | tar -xz && mv zola /usr/bin
+RUN apt-get update && apt-get install wget -y && wget -c https://github.com/getzola/zola/releases/download/v0.10.1/zola-v0.10.1-x86_64-unknown-linux-gnu.tar.gz -O - | tar -xz && mv zola /usr/bin
 COPY . /site
 WORKDIR /site
 RUN zola build
