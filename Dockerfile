@@ -1,6 +1,5 @@
-FROM debian:latest AS ZOLA
-RUN apt-get update && apt-get install -y wget
-RUN wget -c https://github.com/getzola/zola/releases/download/v0.10.0/zola-v0.10.0-x86_64-unknown-linux-gnu.tar.gz -O - | tar -xz
+FROM debian:stable-slim AS ZOLA
+RUN wget -c https://github.com/getzola/zola/releases/download/v0.10.1/zola-v0.10.1-x86_64-unknown-linux-gnu.tar.gz -O - | tar -xz
 RUN mv zola /usr/bin
 COPY . /site
 WORKDIR /site
