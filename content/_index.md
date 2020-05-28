@@ -5,7 +5,7 @@ insert_anchor_links = "right"
 +++
 
 ```
-Test brunch v2
+Test brunch
 ```
 I was inspired by [Linode's approach](https://www.linode.com/2020/01/17/docs-as-code-at-linode/) to creating and managing docs. They call it _docs as code methodology._  Thereby, my aim was making simple and productive way to work with any sort of documents and articles through Markdown, Git and Docker/k8s optionally. 
 
