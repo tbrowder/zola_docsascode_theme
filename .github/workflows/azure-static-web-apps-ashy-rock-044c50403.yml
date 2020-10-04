@@ -22,7 +22,7 @@ jobs:
         id: builddeploy
         uses: shalzz/zola-deploy-action@master
         env:
-          BUILD_DIR: .
+          BUILD_DIR: public
           TOKEN: ${{ secrets.TOKEN }}
           BUILD_ONLY: true
         with:
